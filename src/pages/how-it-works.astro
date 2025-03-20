@@ -1,0 +1,447 @@
+
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/astro/Header.astro';
+import Footer from '../components/astro/Footer.astro';
+import FAQ from '../components/astro/FAQ.astro';
+import CTASection from '../components/astro/CTASection.astro';
+
+const faqItems = [
+  {
+    question: "How long does the application process take?",
+    answer: "The online application typically takes just 5-10 minutes to complete. After submission, you'll usually receive a decision within minutes during business hours. If approved, funds can be deposited as soon as the next business day, though exact timing depends on the lender and your bank's processing times."
+  },
+  {
+    question: "What information will I need to provide on the application?",
+    answer: "You'll need to provide basic personal information (name, address, contact details), employment and income information, banking details for fund transfers, and identification such as your Social Security Number. All information is secured with encryption technology to protect your privacy."
+  },
+  {
+    question: "Can I apply if I have bad credit?",
+    answer: "Yes. Many tribal lenders evaluate factors beyond traditional credit scores, including your current income and employment stability. While having good credit can help you qualify for better rates, many tribal lenders specifically work with borrowers who have less-than-perfect credit histories."
+  },
+  {
+    question: "How will I know if I'm approved?",
+    answer: "After submitting your application, you'll typically receive an on-screen notification of the decision. If approved, you'll also receive an email with the loan offer details. Some lenders may also contact you by phone to verify information or discuss loan terms."
+  }
+];
+---
+
+<Layout
+  title="How Tribal Installment Loans Work | Application Process & Requirements"
+  description="Learn how tribal installment loans work, from application to funding. Discover the simple application process, eligibility requirements, and repayment options."
+  canonicalUrl="https://tribal-installment-loans.com/how-it-works"
+  keywords="how tribal loans work, tribal loan application process, tribal loan requirements, tribal installment loan repayment"
+>
+  <div class="flex flex-col min-h-screen">
+    <Header />
+    
+    <main class="flex-grow pt-24">
+      <section class="py-16 md:py-24 bg-gradient-to-b from-tribal-50 to-white">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto text-center animate-fade-up">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-tribal-900">How Tribal Installment Loans Work</h1>
+            <p class="text-lg text-tribal-600 mb-8">
+              Understanding the process from application to funding and repayment.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 animate-fade-up">
+              <h2 class="text-3xl font-bold mb-4 text-tribal-900">The Tribal Installment Loan Process</h2>
+              <p class="text-tribal-600 max-w-2xl mx-auto">
+                From application to funding, our streamlined process connects you with tribal lenders for quick decisions.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+              <div class="glass-card rounded-xl p-8 text-center animate-fade-up">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-tribal-50 mb-6">
+                  <span class="text-2xl font-bold text-tribal-500">1</span>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-tribal-900">Apply Online</h3>
+                <p class="text-tribal-700">
+                  Complete our simple online application form with your personal information, employment details, and banking information. The form takes just minutes to fill out.
+                </p>
+                <div class="mt-6">
+                  <img 
+                    src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                    alt="Person completing online application" 
+                    class="rounded-lg shadow-soft w-full h-40 object-cover mx-auto"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              
+              <div class="glass-card rounded-xl p-8 text-center animate-fade-up" style="animation-delay: 100ms;">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-tribal-50 mb-6">
+                  <span class="text-2xl font-bold text-tribal-500">2</span>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-tribal-900">Review Offers</h3>
+                <p class="text-tribal-700">
+                  If connected with a lender, you'll receive loan offers with detailed terms, rates, and repayment schedules. Review all information carefully before accepting.
+                </p>
+                <div class="mt-6">
+                  <img 
+                    src="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                    alt="Person reviewing loan documents" 
+                    class="rounded-lg shadow-soft w-full h-40 object-cover mx-auto"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              
+              <div class="glass-card rounded-xl p-8 text-center animate-fade-up" style="animation-delay: 200ms;">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-tribal-50 mb-6">
+                  <span class="text-2xl font-bold text-tribal-500">3</span>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-tribal-900">Receive Funding</h3>
+                <p class="text-tribal-700">
+                  After accepting the loan offer and completing any verification requirements, funds are typically deposited directly into your bank account as soon as the next business day.
+                </p>
+                <div class="mt-6">
+                  <img 
+                    src="https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                    alt="Person receiving money on smartphone" 
+                    class="rounded-lg shadow-soft w-full h-40 object-cover mx-auto"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-20">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-up">
+                  <h2 class="text-3xl font-bold mb-6 text-tribal-900">Eligibility Requirements</h2>
+                  <p class="text-tribal-700 mb-6">
+                    While requirements may vary by lender, most tribal lenders have the following basic eligibility criteria to qualify for an installment loan:
+                  </p>
+                  
+                  <div class="space-y-4">
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500">
+                          <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                      </div>
+                      <div class="ml-4">
+                        <h3 class="font-bold text-tribal-900">Age Requirement</h3>
+                        <p class="text-tribal-700">You must be at least 18 years old (or the minimum age in your state to enter into a loan contract).</p>
+                      </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500">
+                          <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                      </div>
+                      <div class="ml-4">
+                        <h3 class="font-bold text-tribal-900">Income Verification</h3>
+                        <p class="text-tribal-700">You must have a regular source of income, whether from employment, self-employment, benefits, or other consistent sources.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500">
+                          <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                      </div>
+                      <div class="ml-4">
+                        <h3 class="font-bold text-tribal-900">Active Bank Account</h3>
+                        <p class="text-tribal-700">You need an active checking account in your name for the deposit of funds and future scheduled payments.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500">
+                          <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                      </div>
+                      <div class="ml-4">
+                        <h3 class="font-bold text-tribal-900">Contact Information</h3>
+                        <p class="text-tribal-700">You must provide a valid phone number, email address, and mailing address.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500">
+                          <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                      </div>
+                      <div class="ml-4">
+                        <h3 class="font-bold text-tribal-900">Identification</h3>
+                        <p class="text-tribal-700">You'll need to provide a Social Security Number or other government-issued identification.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="animate-fade-up" style="animation-delay: 100ms;">
+                  <img 
+                    src="https://images.unsplash.com/photo-1554224155-8d04cb21ed6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                    alt="Person reviewing documents on laptop" 
+                    class="rounded-xl shadow-soft w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-20">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1 animate-fade-up">
+                  <img 
+                    src="https://images.unsplash.com/photo-1624953587687-daf255b6b80a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                    alt="Calendar with marked payment dates" 
+                    class="rounded-xl shadow-soft w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                
+                <div class="order-1 lg:order-2 animate-fade-up" style="animation-delay: 100ms;">
+                  <h2 class="text-3xl font-bold mb-6 text-tribal-900">Repayment Process</h2>
+                  <p class="text-tribal-700 mb-6">
+                    Tribal installment loans are structured to be repaid over multiple scheduled payments, typically aligned with your pay dates. Here's what you need to know about the repayment process:
+                  </p>
+                  
+                  <div class="space-y-4">
+                    <div class="glass-card rounded-lg p-4">
+                      <h3 class="font-bold text-tribal-900 mb-2">Payment Schedule</h3>
+                      <p class="text-tribal-700">
+                        Your loan agreement will detail the exact dates when payments are due. Most lenders schedule these to coincide with your payday to ensure funds are available.
+                      </p>
+                    </div>
+                    
+                    <div class="glass-card rounded-lg p-4">
+                      <h3 class="font-bold text-tribal-900 mb-2">Automatic Withdrawals</h3>
+                      <p class="text-tribal-700">
+                        In most cases, payments are automatically withdrawn from the same bank account where your loan funds were deposited. This ensures timely payments and helps avoid late fees.
+                      </p>
+                    </div>
+                    
+                    <div class="glass-card rounded-lg p-4">
+                      <h3 class="font-bold text-tribal-900 mb-2">Early Repayment Options</h3>
+                      <p class="text-tribal-700">
+                        Most tribal lenders allow you to pay off your loan early without prepayment penalties, which can save you money on interest. Check your specific loan agreement for details.
+                      </p>
+                    </div>
+                    
+                    <div class="glass-card rounded-lg p-4">
+                      <h3 class="font-bold text-tribal-900 mb-2">Payment Difficulties</h3>
+                      <p class="text-tribal-700">
+                        If you anticipate trouble making a scheduled payment, contact your lender as soon as possible. Many lenders offer hardship programs or payment extensions that may help you avoid late fees.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-20">
+              <div class="text-center mb-12 animate-fade-up">
+                <h2 class="text-3xl font-bold mb-4 text-tribal-900">Tribal Loans vs. Other Loan Options</h2>
+                <p class="text-tribal-600 max-w-2xl mx-auto">
+                  Understanding how tribal installment loans compare to other short-term financing options.
+                </p>
+              </div>
+              
+              <div class="overflow-x-auto animate-fade-up" style="animation-delay: 100ms;">
+                <table class="w-full bg-white rounded-xl shadow-soft">
+                  <thead>
+                    <tr class="bg-tribal-50 text-tribal-900">
+                      <th class="px-6 py-4 text-left font-bold">Feature</th>
+                      <th class="px-6 py-4 text-left font-bold">Tribal Installment Loans</th>
+                      <th class="px-6 py-4 text-left font-bold">Payday Loans</th>
+                      <th class="px-6 py-4 text-left font-bold">Personal Bank Loans</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-tribal-100">
+                    <tr>
+                      <td class="px-6 py-4 font-medium text-tribal-900">Repayment Term</td>
+                      <td class="px-6 py-4 text-tribal-700">Multiple payments over months</td>
+                      <td class="px-6 py-4 text-tribal-700">Single payment on next payday</td>
+                      <td class="px-6 py-4 text-tribal-700">Multiple payments over months/years</td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 font-medium text-tribal-900">Loan Amounts</td>
+                      <td class="px-6 py-4 text-tribal-700">$500 - $5,000 typically</td>
+                      <td class="px-6 py-4 text-tribal-700">$100 - $500 typically</td>
+                      <td class="px-6 py-4 text-tribal-700">$1,000 - $50,000+ typically</td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 font-medium text-tribal-900">Credit Requirements</td>
+                      <td class="px-6 py-4 text-tribal-700">Flexible, considers other factors</td>
+                      <td class="px-6 py-4 text-tribal-700">Minimal credit checking</td>
+                      <td class="px-6 py-4 text-tribal-700">Strict credit requirements</td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 font-medium text-tribal-900">Application Process</td>
+                      <td class="px-6 py-4 text-tribal-700">Simple online application</td>
+                      <td class="px-6 py-4 text-tribal-700">Simple application, often in-store</td>
+                      <td class="px-6 py-4 text-tribal-700">More extensive documentation</td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 font-medium text-tribal-900">Funding Speed</td>
+                      <td class="px-6 py-4 text-tribal-700">As soon as next business day</td>
+                      <td class="px-6 py-4 text-tribal-700">Same day possible</td>
+                      <td class="px-6 py-4 text-tribal-700">Days to weeks</td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 font-medium text-tribal-900">Budget Management</td>
+                      <td class="px-6 py-4 text-tribal-700">Easier with smaller payments</td>
+                      <td class="px-6 py-4 text-tribal-700">Challenging with lump sum</td>
+                      <td class="px-6 py-4 text-tribal-700">Easier with consistent payments</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="py-16 bg-tribal-50">
+        <div class="container mx-auto px-4">
+          <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12 animate-fade-up">
+              <h2 class="text-3xl font-bold mb-4 text-tribal-900">Required Documents</h2>
+              <p class="text-tribal-600 max-w-2xl mx-auto">
+                Having these documents ready before you apply can help expedite the loan application process.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-up" style="animation-delay: 100ms;">
+              <div class="glass-card rounded-xl p-6">
+                <div class="bg-tribal-50 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500">
+                    <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                    <circle cx="9" cy="9" r="2"></circle>
+                    <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-tribal-900">Identification</h3>
+                <ul class="space-y-2 text-tribal-700">
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500 mr-2 mt-1 flex-shrink-0">
+                      <polyline points="9 11 12 14 22 4"></polyline>
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
+                    <span>Valid government-issued ID</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500 mr-2 mt-1 flex-shrink-0">
+                      <polyline points="9 11 12 14 22 4"></polyline>
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
+                    <span>Social Security Number</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500 mr-2 mt-1 flex-shrink-0">
+                      <polyline points="9 11 12 14 22 4"></polyline>
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
+                    <span>Date of birth verification</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="glass-card rounded-xl p-6">
+                <div class="bg-tribal-50 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" x2="12" y1="8" y2="12"></line>
+                    <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-tribal-900">Income Verification</h3>
+                <ul class="space-y-2 text-tribal-700">
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500 mr-2 mt-1 flex-shrink-0">
+                      <polyline points="9 11 12 14 22 4"></polyline>
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
+                    <span>Recent pay stubs</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500 mr-2 mt-1 flex-shrink-0">
+                      <polyline points="9 11 12 14 22 4"></polyline>
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
+                    <span>Employer information</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500 mr-2 mt-1 flex-shrink-0">
+                      <polyline points="9 11 12 14 22 4"></polyline>
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
+                    <span>Income frequency details</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500 mr-2 mt-1 flex-shrink-0">
+                      <polyline points="9 11 12 14 22 4"></polyline>
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
+                    <span>Benefits documentation (if applicable)</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="glass-card rounded-xl p-6">
+                <div class="bg-tribal-50 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500">
+                    <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-tribal-900">Banking Information</h3>
+                <ul class="space-y-2 text-tribal-700">
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500 mr-2 mt-1 flex-shrink-0">
+                      <polyline points="9 11 12 14 22 4"></polyline>
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
+                    <span>Checking account number</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500 mr-2 mt-1 flex-shrink-0">
+                      <polyline points="9 11 12 14 22 4"></polyline>
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
+                    <span>Bank routing number</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500 mr-2 mt-1 flex-shrink-0">
+                      <polyline points="9 11 12 14 22 4"></polyline>
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
+                    <span>Bank statements (sometimes required)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500 mr-2 mt-1 flex-shrink-0">
+                      <polyline points="9 11 12 14 22 4"></polyline>
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
+                    <span>Bank account login (for verification only)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <FAQ items={faqItems} />
+      
+      <CTASection />
+    </main>
+    
+    <Footer />
+  </div>
+</Layout>

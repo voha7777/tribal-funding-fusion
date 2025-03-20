@@ -1,0 +1,119 @@
+
+---
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  items: FAQItem[];
+  title?: string;
+  subtitle?: string;
+}
+
+const { 
+  items, 
+  title = "Frequently Asked Questions",
+  subtitle = "Find answers to common questions about tribal installment loans."
+} = Astro.props;
+---
+
+<section class="section-padding bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16 fade-in-when-visible">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-tribal-900">{title}</h2>
+      <p class="text-tribal-600 max-w-2xl mx-auto">
+        {subtitle}
+      </p>
+    </div>
+    
+    <div class="max-w-3xl mx-auto">
+      {items.map((item, index) => (
+        <div class={`mb-4 fade-in-when-visible faq-item`} data-index={index}>
+          <button
+            class="w-full text-left p-6 flex justify-between items-center transition-all bg-white hover:bg-tribal-50/50 rounded-lg shadow-sm border border-tribal-100/50 faq-button"
+            aria-expanded="false"
+          >
+            <span class="font-bold text-lg text-tribal-900">{item.question}</span>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="20" 
+              height="20" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              stroke-width="2" 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              class="text-tribal-600 transition-transform faq-chevron"
+            >
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+          <div 
+            class="transition-all duration-300 ease-in-out bg-white border-x border-b border-tribal-100/50 rounded-b-lg max-h-0 opacity-0 overflow-hidden faq-content"
+          >
+            <div class="p-6 text-tribal-700">
+              {item.answer}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqButtons = document.querySelectorAll('.faq-button');
+    
+    faqButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const faqItem = button.closest('.faq-item');
+        const content = faqItem?.querySelector('.faq-content');
+        const chevron = button.querySelector('.faq-chevron');
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        
+        // Close all FAQs
+        document.querySelectorAll('.faq-item').forEach(item => {
+          if (item !== faqItem) {
+            const itemButton = item.querySelector('.faq-button');
+            const itemContent = item.querySelector('.faq-content');
+            const itemChevron = item.querySelector('.faq-chevron');
+            
+            if (itemButton && itemContent && itemChevron) {
+              itemButton.setAttribute('aria-expanded', 'false');
+              itemButton.classList.remove('bg-tribal-50', 'rounded-t-lg');
+              itemButton.classList.add('rounded-lg');
+              itemContent.classList.remove('max-h-[500px]', 'opacity-100');
+              itemContent.classList.add('max-h-0', 'opacity-0');
+              itemChevron.classList.remove('rotate-180');
+              item.classList.remove('border-l-4', 'border-tribal-500');
+            }
+          }
+        });
+        
+        // Toggle current FAQ
+        if (faqItem && content && chevron) {
+          if (isExpanded) {
+            button.setAttribute('aria-expanded', 'false');
+            button.classList.remove('bg-tribal-50', 'rounded-t-lg');
+            button.classList.add('rounded-lg');
+            content.classList.remove('max-h-[500px]', 'opacity-100');
+            content.classList.add('max-h-0', 'opacity-0');
+            chevron.classList.remove('rotate-180');
+            faqItem.classList.remove('border-l-4', 'border-tribal-500');
+          } else {
+            button.setAttribute('aria-expanded', 'true');
+            button.classList.add('bg-tribal-50', 'rounded-t-lg');
+            button.classList.remove('rounded-lg');
+            content.classList.add('max-h-[500px]', 'opacity-100');
+            content.classList.remove('max-h-0', 'opacity-0');
+            chevron.classList.add('rotate-180');
+            faqItem.classList.add('border-l-4', 'border-tribal-500');
+          }
+        }
+      });
+    });
+  });
+</script>

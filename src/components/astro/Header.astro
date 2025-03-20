@@ -1,0 +1,53 @@
+
+---
+---
+
+<header class="fixed w-full bg-white/95 backdrop-blur-sm border-b border-tribal-100 z-30">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center">
+        <span class="text-2xl font-bold text-tribal-900">Tribal<span class="text-tribal-500">Loans</span></span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="/" class="text-tribal-900 hover:text-tribal-500 font-medium">Home</a>
+        <a href="/how-it-works" class="text-tribal-900 hover:text-tribal-500 font-medium">How It Works</a>
+        <a href="/about-us" class="text-tribal-900 hover:text-tribal-500 font-medium">About Us</a>
+        <a href="/contact" class="text-tribal-900 hover:text-tribal-500 font-medium">Contact</a>
+      </nav>
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden flex items-center text-tribal-900">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-tribal-100">
+    <div class="container mx-auto px-4 py-4">
+      <nav class="flex flex-col space-y-4">
+        <a href="/" class="text-tribal-900 hover:text-tribal-500 font-medium py-2">Home</a>
+        <a href="/how-it-works" class="text-tribal-900 hover:text-tribal-500 font-medium py-2">How It Works</a>
+        <a href="/about-us" class="text-tribal-900 hover:text-tribal-500 font-medium py-2">About Us</a>
+        <a href="/contact" class="text-tribal-900 hover:text-tribal-500 font-medium py-2">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (menuButton && mobileMenu) {
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>

@@ -1,0 +1,127 @@
+
+---
+interface Props {
+  title: string;
+  description: string;
+  canonicalUrl?: string;
+  keywords?: string;
+}
+
+const { 
+  title, 
+  description, 
+  canonicalUrl = "https://tribal-installment-loans.com", 
+  keywords = "tribal loans, installment loans, tribal funding, personal loans, bad credit loans, emergency loans" 
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Tribal Funding Solutions" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&family=Roboto+Mono&display=swap">
+    <style is:global>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+      
+      /* Global styles from index.css */
+      :root {
+        --tribal-50: #f8f9fa;
+        --tribal-100: #e9ecef;
+        --tribal-200: #dee2e6;
+        --tribal-300: #ced4da;
+        --tribal-400: #adb5bd;
+        --tribal-500: #6658ea;
+        --tribal-600: #5142d1;
+        --tribal-700: #343a40;
+        --tribal-800: #212529;
+        --tribal-900: #121416;
+      }
+      
+      body {
+        font-family: 'Inter', sans-serif;
+        color: var(--tribal-700);
+        background-color: #f8f9fb;
+      }
+      
+      .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+      }
+      
+      .section-padding {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+      
+      .shadow-soft {
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+      }
+      
+      .button-hover-effect {
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      
+      .button-hover-effect:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Animations */
+      .animate-fade-up {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeUp 0.6s ease-out forwards;
+      }
+      
+      @keyframes fadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .fade-in-when-visible {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      
+      .fade-in-when-visible.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <slot />
+    <script>
+      // IntersectionObserver script for fade-in animations
+      document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        const elements = document.querySelectorAll('.fade-in-when-visible');
+        elements.forEach(el => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>

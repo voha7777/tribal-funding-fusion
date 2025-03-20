@@ -1,0 +1,475 @@
+
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/astro/Header.astro';
+import Footer from '../components/astro/Footer.astro';
+import FAQ from '../components/astro/FAQ.astro';
+import CTASection from '../components/astro/CTASection.astro';
+
+// FAQ data
+const faqItems = [
+  {
+    question: "What is a tribal installment loan?",
+    answer: "A tribal installment loan is a type of personal loan offered by lenders who operate under Native American tribal jurisdiction. These loans provide borrowers with a lump sum that is repaid over a fixed schedule with regular payments, unlike payday loans which require full repayment on your next payday. Tribal lenders may offer different terms than those available from state-licensed lenders, and they operate under tribal sovereignty."
+  },
+  {
+    question: "How much can I borrow with a tribal installment loan?",
+    answer: "Tribal installment loan amounts typically range from $500 to $5,000, depending on the lender and factors such as your income, credit history, and state of residence. First-time borrowers often qualify for lower amounts initially, with the opportunity to apply for larger loans after establishing a positive repayment history."
+  },
+  {
+    question: "Do I need good credit to get approved?",
+    answer: "One advantage of tribal installment loans is that lenders often consider factors beyond traditional credit scores. While having good credit can help you qualify for better rates, many tribal lenders work with borrowers who have less-than-perfect credit, including those with poor or limited credit histories. They typically evaluate your current income, employment stability, and ability to repay."
+  },
+  {
+    question: "How quickly can I receive funds?",
+    answer: "The application process for tribal installment loans is designed to be fast and efficient. In many cases, you can receive a decision on your application within minutes of submission. If approved, funds are typically deposited directly into your bank account as soon as the next business day, though some lenders may offer same-day funding options for an additional fee."
+  },
+  {
+    question: "Are tribal loans more expensive than traditional bank loans?",
+    answer: "Tribal installment loans generally have higher interest rates compared to traditional bank loans or credit union products. This reflects the increased risk lenders take by offering loans to borrowers who may not qualify for conventional financing options. However, they can be less expensive than payday loans or title loans when repaid according to schedule, and they provide the benefit of spreading repayment over multiple installments."
+  },
+  {
+    question: "Can I pay off my tribal loan early?",
+    answer: "Yes, most tribal lenders allow borrowers to pay off their loans early without prepayment penalties. Early repayment can save you money on interest charges that would have accrued over the remaining loan term. However, loan terms vary by lender, so it's important to review the specific prepayment policies in your loan agreement."
+  }
+];
+---
+
+<Layout 
+  title="Tribal Installment Loans | Fast Funding Solutions"
+  description="Access tribal installment loans with competitive rates. Find the financial support you need with our trusted tribal lending options across all US states."
+  canonicalUrl="https://tribal-installment-loans.com"
+>
+  <div class="flex flex-col min-h-screen">
+    <Header />
+    
+    <main class="flex-grow">
+      <!-- Hero Section -->
+      <section class="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-tribal-50 to-white overflow-hidden relative">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="animate-fade-up">
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-tribal-900">
+                Access Tribal Installment Loans For Your Financial Needs
+              </h1>
+              <p class="text-lg text-tribal-600 mb-8">
+                Get connected with tribal lenders offering flexible payment options and competitive rates. Apply online for fast decisions and funding.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <a 
+                  href="#apply-now" 
+                  class="button-hover-effect bg-tribal-500 hover:bg-tribal-600 text-white px-6 py-3 rounded-full font-medium inline-flex items-center"
+                >
+                  Apply Now
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+                <a 
+                  href="/how-it-works" 
+                  class="button-hover-effect bg-white border border-tribal-200 hover:border-tribal-300 text-tribal-900 px-6 py-3 rounded-full font-medium inline-flex items-center"
+                >
+                  How It Works
+                </a>
+              </div>
+            </div>
+            
+            <div class="relative animate-fade-up" style="animation-delay: 200ms;">
+              <img 
+                src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                alt="Person using tablet for online loan application" 
+                class="rounded-xl shadow-soft w-full"
+                loading="eager"
+              />
+              <div class="absolute -bottom-6 -left-6 bg-white rounded-lg shadow-soft p-4 max-w-xs hidden md:block">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 bg-green-100 rounded-full p-2 mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600">
+                      <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
+                  </div>
+                  <p class="text-sm font-medium text-tribal-900">Fast approvals with funds as soon as the next business day</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Features Section -->
+      <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16 fade-in-when-visible">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-tribal-900">Why Choose Tribal Installment Loans</h2>
+            <p class="text-tribal-600 max-w-2xl mx-auto">
+              Discover the advantages of working with tribal lenders for your financial needs.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass-card rounded-xl p-6 fade-in-when-visible">
+              <div class="bg-tribal-50 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500">
+                  <path d="M12 22V8"></path>
+                  <path d="m5 12 7-4 7 4"></path>
+                  <path d="M5 19a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5Z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-tribal-900">Fast Funding</h3>
+              <p class="text-tribal-700">
+                After approval, funds can be deposited directly to your bank account as soon as the next business day, providing quick access to the money you need.
+              </p>
+            </div>
+            
+            <div class="glass-card rounded-xl p-6 fade-in-when-visible" style="animation-delay: 100ms;">
+              <div class="bg-tribal-50 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500">
+                  <path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2h0V5z"></path>
+                  <path d="M2 9v1c0 1.1.9 2 2 2h1"></path>
+                  <path d="M16 11h0"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-tribal-900">Flexible Eligibility</h3>
+              <p class="text-tribal-700">
+                Tribal lenders often consider factors beyond traditional credit scores, making loans accessible for those with less-than-perfect credit histories.
+              </p>
+            </div>
+            
+            <div class="glass-card rounded-xl p-6 fade-in-when-visible" style="animation-delay: 200ms;">
+              <div class="bg-tribal-50 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-tribal-900">Convenient Repayment</h3>
+              <p class="text-tribal-700">
+                Unlike payday loans, tribal installment loans offer scheduled payments over time, helping you manage your budget more effectively with predictable installments.
+              </p>
+            </div>
+            
+            <div class="glass-card rounded-xl p-6 fade-in-when-visible" style="animation-delay: 300ms;">
+              <div class="bg-tribal-50 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-tribal-900">Higher Loan Amounts</h3>
+              <p class="text-tribal-700">
+                Tribal installment loans typically offer larger amounts than payday loans, providing the financial support you need for significant expenses.
+              </p>
+            </div>
+            
+            <div class="glass-card rounded-xl p-6 fade-in-when-visible" style="animation-delay: 400ms;">
+              <div class="bg-tribal-50 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500">
+                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <path d="M16 13H8"></path>
+                  <path d="M16 17H8"></path>
+                  <path d="M10 9H8"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-tribal-900">Simple Application</h3>
+              <p class="text-tribal-700">
+                Our online application process is quick and user-friendly, allowing you to apply from anywhere with an internet connection in just minutes.
+              </p>
+            </div>
+            
+            <div class="glass-card rounded-xl p-6 fade-in-when-visible" style="animation-delay: 500ms;">
+              <div class="bg-tribal-50 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tribal-500">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-tribal-900">Secure Process</h3>
+              <p class="text-tribal-700">
+                We prioritize your privacy and data security with advanced encryption and secure systems to protect your personal and financial information.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Process Steps -->
+      <section class="py-16 md:py-24 bg-tribal-50">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16 fade-in-when-visible">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-tribal-900">How Tribal Installment Loans Work</h2>
+            <p class="text-tribal-600 max-w-2xl mx-auto">
+              Our simple process connects you with tribal lenders for quick funding decisions.
+            </p>
+          </div>
+          
+          <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="text-center fade-in-when-visible">
+                <div class="relative mb-6 mx-auto w-20 h-20">
+                  <div class="absolute inset-0 rounded-full bg-tribal-50 border-2 border-dashed border-tribal-200 flex items-center justify-center"></div>
+                  <div class="absolute inset-2 bg-tribal-500 rounded-full text-white flex items-center justify-center text-2xl font-bold">1</div>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-tribal-900">Complete Application</h3>
+                <p class="text-tribal-700">
+                  Fill out our simple online form with your personal and financial information. The application takes just minutes to complete.
+                </p>
+              </div>
+              
+              <div class="text-center fade-in-when-visible" style="animation-delay: 100ms;">
+                <div class="relative mb-6 mx-auto w-20 h-20">
+                  <div class="absolute inset-0 rounded-full bg-tribal-50 border-2 border-dashed border-tribal-200 flex items-center justify-center"></div>
+                  <div class="absolute inset-2 bg-tribal-500 rounded-full text-white flex items-center justify-center text-2xl font-bold">2</div>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-tribal-900">Review Offers</h3>
+                <p class="text-tribal-700">
+                  If connected with a lender, review their loan offer carefully. Pay attention to terms, rates, fees, and repayment schedule before accepting.
+                </p>
+              </div>
+              
+              <div class="text-center fade-in-when-visible" style="animation-delay: 200ms;">
+                <div class="relative mb-6 mx-auto w-20 h-20">
+                  <div class="absolute inset-0 rounded-full bg-tribal-50 border-2 border-dashed border-tribal-200 flex items-center justify-center"></div>
+                  <div class="absolute inset-2 bg-tribal-500 rounded-full text-white flex items-center justify-center text-2xl font-bold">3</div>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-tribal-900">Receive Funds</h3>
+                <p class="text-tribal-700">
+                  After accepting an offer and completing any verification steps, funds are typically deposited into your bank account by the next business day.
+                </p>
+              </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+              <a 
+                href="#apply-now" 
+                class="button-hover-effect bg-tribal-500 hover:bg-tribal-600 text-white px-6 py-3 rounded-full font-medium inline-flex items-center"
+              >
+                Start Your Application
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Benefits Section -->
+      <section class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16 fade-in-when-visible">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-tribal-900">Benefits of Tribal Installment Loans</h2>
+            <p class="text-tribal-600 max-w-2xl mx-auto">
+              Discover how tribal installment loans differ from other short-term financing options.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="fade-in-when-visible">
+              <img 
+                src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                alt="Person reviewing financial documents" 
+                class="rounded-xl shadow-soft w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            
+            <div class="space-y-6 fade-in-when-visible">
+              <div class="glass-card rounded-lg p-6">
+                <h3 class="text-xl font-bold mb-3 text-tribal-900">Structured Repayment Plans</h3>
+                <p class="text-tribal-700">
+                  Unlike payday loans that require full repayment on your next payday, tribal installment loans allow you to repay the borrowed amount over multiple scheduled payments, making budget management more predictable.
+                </p>
+              </div>
+              
+              <div class="glass-card rounded-lg p-6">
+                <h3 class="text-xl font-bold mb-3 text-tribal-900">Larger Loan Amounts</h3>
+                <p class="text-tribal-700">
+                  Tribal installment loans typically offer higher borrowing limits compared to payday loans, providing access to the funds you need for significant expenses or financial emergencies.
+                </p>
+              </div>
+              
+              <div class="glass-card rounded-lg p-6">
+                <h3 class="text-xl font-bold mb-3 text-tribal-900">Alternative Credit Considerations</h3>
+                <p class="text-tribal-700">
+                  Many tribal lenders look beyond traditional credit scores when evaluating loan applications, considering factors like income and employment stability. This can be beneficial for borrowers with less-than-perfect credit.
+                </p>
+              </div>
+              
+              <div class="glass-card rounded-lg p-6">
+                <h3 class="text-xl font-bold mb-3 text-tribal-900">Convenient Online Process</h3>
+                <p class="text-tribal-700">
+                  Apply from anywhere with an internet connection, receive quick decisions, and if approved, get funds deposited directly to your bank account—all without visiting a physical location.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- State Selector -->
+      <section class="py-16 md:py-24 bg-tribal-50">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16 fade-in-when-visible">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-tribal-900">Tribal Installment Loans By State</h2>
+            <p class="text-tribal-600 max-w-2xl mx-auto">
+              Find information about tribal loan options specific to your state.
+            </p>
+          </div>
+          
+          <div class="max-w-4xl mx-auto fade-in-when-visible" style="animation-delay: 100ms;">
+            <div class="bg-white rounded-xl shadow-soft p-8">
+              <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                <a href="/california" class="text-tribal-700 hover:text-tribal-500">California</a>
+                <a href="/texas" class="text-tribal-700 hover:text-tribal-500">Texas</a>
+                <a href="/florida" class="text-tribal-700 hover:text-tribal-500">Florida</a>
+                <a href="/new-york" class="text-tribal-700 hover:text-tribal-500">New York</a>
+                <a href="/pennsylvania" class="text-tribal-700 hover:text-tribal-500">Pennsylvania</a>
+                <a href="/illinois" class="text-tribal-700 hover:text-tribal-500">Illinois</a>
+                <a href="/ohio" class="text-tribal-700 hover:text-tribal-500">Ohio</a>
+                <a href="/georgia" class="text-tribal-700 hover:text-tribal-500">Georgia</a>
+                <a href="/north-carolina" class="text-tribal-700 hover:text-tribal-500">North Carolina</a>
+                <a href="/michigan" class="text-tribal-700 hover:text-tribal-500">Michigan</a>
+                <a href="/new-jersey" class="text-tribal-700 hover:text-tribal-500">New Jersey</a>
+                <a href="/virginia" class="text-tribal-700 hover:text-tribal-500">Virginia</a>
+              </div>
+              
+              <div class="mt-6 text-center">
+                <a href="#" class="text-tribal-500 hover:text-tribal-600 font-medium">
+                  View All States
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block ml-1">
+                    <path d="m9 18 6-6-6-6"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Testimonials -->
+      <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16 fade-in-when-visible">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-tribal-900">What Our Customers Say</h2>
+            <p class="text-tribal-600 max-w-2xl mx-auto">
+              Read testimonials from people who have used our service to connect with tribal lenders.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-card rounded-xl p-6 fade-in-when-visible">
+              <div class="flex items-center mb-4">
+                <div class="text-yellow-400 flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+              </div>
+              <p class="mb-4 text-tribal-700">
+                "I was in a tight spot financially and needed funds quickly. The application process was simple, and I was connected with a lender the same day. The installment plan made repayment manageable for my budget."
+              </p>
+              <div class="flex items-center">
+                <div class="bg-tribal-100 rounded-full w-10 h-10 flex items-center justify-center text-tribal-600 font-bold mr-3">
+                  JM
+                </div>
+                <div>
+                  <h4 class="font-bold text-tribal-900">James M.</h4>
+                  <p class="text-sm text-tribal-500">California</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="glass-card rounded-xl p-6 fade-in-when-visible" style="animation-delay: 100ms;">
+              <div class="flex items-center mb-4">
+                <div class="text-yellow-400 flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+              </div>
+              <p class="mb-4 text-tribal-700">
+                "My credit score isn't great, so I was surprised and relieved when I was approved. The entire process was transparent, and the funds arrived in my account the next business day as promised."
+              </p>
+              <div class="flex items-center">
+                <div class="bg-tribal-100 rounded-full w-10 h-10 flex items-center justify-center text-tribal-600 font-bold mr-3">
+                  SL
+                </div>
+                <div>
+                  <h4 class="font-bold text-tribal-900">Sarah L.</h4>
+                  <p class="text-sm text-tribal-500">Texas</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="glass-card rounded-xl p-6 fade-in-when-visible" style="animation-delay: 200ms;">
+              <div class="flex items-center mb-4">
+                <div class="text-yellow-400 flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+              </div>
+              <p class="mb-4 text-tribal-700">
+                "I appreciate that the repayment terms were clearly explained before I accepted the loan. Being able to make payments over time instead of all at once has been a huge help for my financial situation."
+              </p>
+              <div class="flex items-center">
+                <div class="bg-tribal-100 rounded-full w-10 h-10 flex items-center justify-center text-tribal-600 font-bold mr-3">
+                  RD
+                </div>
+                <div>
+                  <h4 class="font-bold text-tribal-900">Robert D.</h4>
+                  <p class="text-sm text-tribal-500">Florida</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- FAQ Section -->
+      <FAQ items={faqItems} />
+      
+      <!-- CTA Section -->
+      <CTASection />
+    </main>
+    
+    <Footer />
+  </div>
+</Layout>
