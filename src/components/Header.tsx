@@ -107,7 +107,7 @@ const Header: React.FC = () => {
             </div>
             
             <Link 
-              to="/" 
+              to="/how-it-works" 
               className={cn(
                 "font-medium transition-colors", 
                 isScrolled ? "text-tribal-800 hover:text-tribal-600" : "text-white/90 hover:text-white"
@@ -117,7 +117,7 @@ const Header: React.FC = () => {
             </Link>
             
             <Link 
-              to="/" 
+              to="/about-us" 
               className={cn(
                 "font-medium transition-colors", 
                 isScrolled ? "text-tribal-800 hover:text-tribal-600" : "text-white/90 hover:text-white"
@@ -198,7 +198,7 @@ const Header: React.FC = () => {
             )}
             
             <Link 
-              to="/" 
+              to="/how-it-works" 
               className="block px-4 py-2 text-tribal-800 hover:text-tribal-600 font-medium"
               onClick={toggleMenu}
             >
@@ -206,7 +206,7 @@ const Header: React.FC = () => {
             </Link>
             
             <Link 
-              to="/" 
+              to="/about-us" 
               className="block px-4 py-2 text-tribal-800 hover:text-tribal-600 font-medium"
               onClick={toggleMenu}
             >

@@ -9,6 +9,8 @@ import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import State from "./pages/[state]";
 import NotFound from "./pages/NotFound";
+import HowItWorks from "./pages/HowItWorks";
+import AboutUs from "./pages/AboutUs";
 
 // Create a new QueryClient instance
 const queryClient = new QueryClient({
@@ -30,6 +32,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/how-it-works" element={<HowItWorks />} />
+            <Route path="/about-us" element={<AboutUs />} />
             <Route path="/:state" element={<State />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
