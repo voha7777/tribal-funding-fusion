@@ -11,6 +11,8 @@ import State from "./pages/[state]";
 import NotFound from "./pages/NotFound";
 import HowItWorks from "./pages/HowItWorks";
 import AboutUs from "./pages/AboutUs";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
 
 // Create a new QueryClient instance
 const queryClient = new QueryClient({
@@ -34,6 +36,8 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-conditions" element={<TermsConditions />} />
             <Route path="/:state" element={<State />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

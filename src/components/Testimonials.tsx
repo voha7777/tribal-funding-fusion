@@ -58,7 +58,7 @@ const Testimonials: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 fade-in-when-visible">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">What Our Customers Say</h2>
-          <p className="text-tribal-100/80 max-w-2xl mx-auto">
+          <p className="text-white/90 max-w-2xl mx-auto">
             Don't just take our word for it. Hear from borrowers who have successfully used tribal installment loans to address their financial needs.
           </p>
         </div>
@@ -75,20 +75,20 @@ const Testimonials: React.FC = () => {
                     : 'opacity-0 translate-x-16 z-10'
               }`}
             >
-              <div className="glass-card bg-white/10 backdrop-blur-sm rounded-xl p-8 md:p-10 border border-white/20">
-                <div className="mb-6 text-tribal-300">
+              <div className="glass-card bg-white/20 backdrop-blur-sm rounded-xl p-8 md:p-10 border border-white/30">
+                <div className="mb-6 text-white">
                   <Quote size={40} />
                 </div>
-                <blockquote className="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed">
+                <blockquote className="text-xl md:text-2xl mb-8 text-white leading-relaxed">
                   "{testimonial.quote}"
                 </blockquote>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full bg-tribal-700 flex items-center justify-center text-tribal-100 text-lg font-medium">
+                  <div className="w-12 h-12 rounded-full bg-tribal-600 flex items-center justify-center text-white text-lg font-medium">
                     {testimonial.name.charAt(0)}
                   </div>
                   <div className="ml-4">
                     <div className="font-bold text-white">{testimonial.name}</div>
-                    <div className="text-tribal-300">{testimonial.location}</div>
+                    <div className="text-white/90">{testimonial.location}</div>
                   </div>
                 </div>
               </div>
@@ -102,8 +102,8 @@ const Testimonials: React.FC = () => {
                 key={index}
                 className={`w-3 h-3 rounded-full transition-all ${
                   index === activeIndex 
-                    ? 'bg-tribal-100' 
-                    : 'bg-tribal-100/30 hover:bg-tribal-100/50'
+                    ? 'bg-white' 
+                    : 'bg-white/40 hover:bg-white/60'
                 }`}
                 onClick={() => setActiveIndex(index)}
                 aria-label={`Go to testimonial ${index + 1}`}

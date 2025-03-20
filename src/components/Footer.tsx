@@ -80,13 +80,13 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/" className="text-tribal-100/80 hover:text-white flex items-center">
+                <Link to="/privacy-policy" className="text-tribal-100/80 hover:text-white flex items-center">
                   <ChevronRight size={14} className="mr-2" />
                   <span>Privacy Policy</span>
                 </Link>
               </li>
               <li>
-                <Link to="/" className="text-tribal-100/80 hover:text-white flex items-center">
+                <Link to="/terms-conditions" className="text-tribal-100/80 hover:text-white flex items-center">
                   <ChevronRight size={14} className="mr-2" />
                   <span>Terms & Conditions</span>
                 </Link>

@@ -79,10 +79,10 @@ const FAQ: React.FC<FAQProps> = ({
                 />
               </button>
               <div 
-                className={`overflow-hidden transition-all duration-300 ease-in-out bg-white border-x border-b border-tribal-100/50 rounded-b-lg ${
+                className={`transition-all duration-300 ease-in-out bg-white border-x border-b border-tribal-100/50 rounded-b-lg ${
                   openIndex === index 
-                    ? 'max-h-96 opacity-100' 
-                    : 'max-h-0 opacity-0'
+                    ? 'max-h-[500px] opacity-100' 
+                    : 'max-h-0 opacity-0 overflow-hidden'
                 }`}
               >
                 <div className="p-6 text-tribal-700">
