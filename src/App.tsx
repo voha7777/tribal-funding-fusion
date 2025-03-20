@@ -10,7 +10,15 @@ import Contact from "./pages/Contact";
 import State from "./pages/[state]";
 import NotFound from "./pages/NotFound";
 
-const queryClient = new QueryClient();
+// Create a new QueryClient instance
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      retry: false,
+    },
+  },
+});
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
