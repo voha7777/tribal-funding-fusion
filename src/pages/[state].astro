@@ -1,0 +1,479 @@
+
+---
+import Layout from '../layouts/Layout.astro';
+import FAQ from '../components/astro/FAQ.astro';
+import CTASection from '../components/astro/CTASection.astro';
+import { stateData } from '../utils/stateData';
+
+export function getStaticPaths() {
+  return Object.keys(stateData).map(state => ({
+    params: { state },
+    props: { stateInfo: stateData[state] }
+  }));
+}
+
+const { state } = Astro.params;
+const { stateInfo } = Astro.props;
+
+// Generate a random number of testimonials between 3 and 10
+const testimonialsCount = Math.floor(Math.random() * 8) + 3;
+
+// Sample testimonials data - these will be randomly selected for each state page
+const allTestimonials = [
+  {
+    name: "James W.",
+    location: stateInfo.name,
+    text: "I needed emergency funds for medical bills and was approved within hours. The repayment terms were clear and manageable.",
+    rating: 5
+  },
+  {
+    name: "Maria L.",
+    location: stateInfo.name,
+    text: "As a single mom, I've used tribal loans twice when unexpected expenses came up. The process was quick and the customer service was excellent.",
+    rating: 5
+  },
+  {
+    name: "Robert T.",
+    location: stateInfo.name,
+    text: "After being turned down by banks, I found tribal lenders to be more understanding of my financial situation. They provided options that worked for me.",
+    rating: 4
+  },
+  {
+    name: "Sarah K.",
+    location: stateInfo.name,
+    text: "The application process was straightforward and I received my funds the next day. It helped me cover an emergency car repair.",
+    rating: 5
+  },
+  {
+    name: "David H.",
+    location: stateInfo.name,
+    text: "I appreciate how transparent the terms were. No hidden fees and the customer service team answered all my questions promptly.",
+    rating: 4
+  },
+  {
+    name: "Jennifer P.",
+    location: stateInfo.name,
+    text: "This was my first time using a tribal loan. The online application was easy and I got approved despite having average credit.",
+    rating: 4
+  },
+  {
+    name: "Michael B.",
+    location: stateInfo.name,
+    text: "I've used various lenders in the past, but tribal loans offered better rates and more flexible terms for my situation.",
+    rating: 5
+  },
+  {
+    name: "Lisa R.",
+    location: stateInfo.name,
+    text: "When my paycheck was delayed, this loan helped me pay rent on time. Quick approval and funding saved me from late fees.",
+    rating: 5
+  },
+  {
+    name: "Thomas G.",
+    location: stateInfo.name,
+    text: "The loan officers were very helpful in explaining the terms. I felt like they genuinely wanted to find a solution that worked for me.",
+    rating: 4
+  },
+  {
+    name: "Emily S.",
+    location: stateInfo.name,
+    text: "As a teacher with seasonal income, tribal loans have helped me bridge financial gaps during summer months. The process is always smooth.",
+    rating: 5
+  },
+  {
+    name: "Richard M.",
+    location: stateInfo.name,
+    text: "I was hesitant at first, but the entire experience was professional. The funds arrived exactly when they said they would.",
+    rating: 4
+  },
+  {
+    name: "Patricia C.",
+    location: stateInfo.name,
+    text: "After unexpected home repairs, this loan helped me get things fixed quickly. I appreciated the straightforward process and reasonable terms.",
+    rating: 5
+  },
+  {
+    name: "Kevin W.",
+    location: stateInfo.name,
+    text: "The website made it easy to understand what I qualified for and what the payments would be. No surprises or hidden fees.",
+    rating: 4
+  },
+  {
+    name: "Stephanie L.",
+    location: stateInfo.name,
+    text: "As a small business owner with fluctuating income, tribal loans have been a helpful resource during slow periods. The application process is quick and painless.",
+    rating: 5
+  },
+  {
+    name: "Brandon T.",
+    location: stateInfo.name,
+    text: "I've used tribal loans twice now for unexpected expenses. Both times the process was fast and the terms were fair.",
+    rating: 4
+  }
+];
+
+// Shuffle and select random testimonials
+function shuffleArray(array) {
+  const newArr = [...array];
+  for (let i = newArr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+  }
+  return newArr;
+}
+
+const randomTestimonials = shuffleArray(allTestimonials).slice(0, testimonialsCount);
+
+// FAQ items specific to this state
+const faqItems = [
+  {
+    question: `Are tribal installment loans legal in ${stateInfo.name}?`,
+    answer: `Yes, tribal installment loans are available to residents of ${stateInfo.name}. Tribal lenders operate under sovereign tribal law and may offer loans in states where traditional payday loans are restricted. However, specific terms and availability may vary.`
+  },
+  {
+    question: `What are the typical loan amounts available to ${stateInfo.name} residents?`,
+    answer: `${stateInfo.name} residents can typically apply for tribal installment loans ranging from $300 to $5,000, depending on their qualifications, income, and the specific tribal lender's offerings.`
+  },
+  {
+    question: `How quickly can ${stateInfo.name} residents receive funds?`,
+    answer: `Most approved applicants in ${stateInfo.name} can receive funds via direct deposit as soon as the next business day after approval and completion of all verification requirements.`
+  },
+  {
+    question: `What requirements do ${stateInfo.name} residents need to meet to qualify?`,
+    answer: `To qualify for a tribal installment loan in ${stateInfo.name}, you typically need to be at least 18 years old, have a regular source of income, have an active checking account, and provide valid contact information. Each tribal lender may have additional specific requirements.`
+  },
+  {
+    question: `Do tribal lenders check credit scores for ${stateInfo.name} applicants?`,
+    answer: `While some tribal lenders may perform credit checks, many focus more on your current income and ability to repay rather than solely on your credit score. This makes tribal installment loans an option for many ${stateInfo.name} residents with less-than-perfect credit.`
+  }
+];
+---
+
+<Layout 
+  title={`Tribal Installment Loans in ${stateInfo.name} | Quick Application & Funding`}
+  description={`Apply for tribal installment loans in ${stateInfo.name}. Connect with tribal lenders offering flexible payment terms for ${stateInfo.name} residents.`}
+  canonicalUrl={`https://tribal-installment-loans.com/${state}`}
+  keywords={`tribal loans ${stateInfo.name}, installment loans ${stateInfo.name}, tribal funding ${stateInfo.name}, personal loans ${stateInfo.name}, bad credit loans ${stateInfo.name}, emergency loans ${stateInfo.name}`}
+>
+  <div class="flex flex-col min-h-screen">
+    <!-- Import Header -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm border-b border-tribal-100 z-30">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center h-20">
+          <a href="/" class="flex items-center">
+            <span class="text-2xl font-bold text-tribal-900">Tribal<span class="text-tribal-500">Loans</span></span>
+          </a>
+          
+          <nav class="hidden md:flex space-x-6">
+            <a href="/" class="text-tribal-900 hover:text-tribal-500 font-medium">Home</a>
+            <a href="/how-it-works" class="text-tribal-900 hover:text-tribal-500 font-medium">How It Works</a>
+            <a href="/about-us" class="text-tribal-900 hover:text-tribal-500 font-medium">About Us</a>
+            <a href="/contact" class="text-tribal-900 hover:text-tribal-500 font-medium">Contact</a>
+            <a href="/apply" class="text-white bg-tribal-500 hover:bg-tribal-600 px-4 py-2 rounded-full font-medium">Apply Now</a>
+          </nav>
+          
+          <button id="mobile-menu-button" class="md:hidden flex items-center text-tribal-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-tribal-100">
+        <div class="container mx-auto px-4 py-4">
+          <nav class="flex flex-col space-y-4">
+            <a href="/" class="text-tribal-900 hover:text-tribal-500 font-medium py-2">Home</a>
+            <a href="/how-it-works" class="text-tribal-900 hover:text-tribal-500 font-medium py-2">How It Works</a>
+            <a href="/about-us" class="text-tribal-900 hover:text-tribal-500 font-medium py-2">About Us</a>
+            <a href="/contact" class="text-tribal-900 hover:text-tribal-500 font-medium py-2">Contact</a>
+            <a href="/privacy-policy" class="text-tribal-900 hover:text-tribal-500 font-medium py-2">Privacy Policy</a>
+            <a href="/terms-conditions" class="text-tribal-900 hover:text-tribal-500 font-medium py-2">Terms & Conditions</a>
+            <a 
+              href="/apply" 
+              class="text-white bg-tribal-500 hover:bg-tribal-600 px-6 py-3 rounded-full font-medium text-center mt-4"
+            >
+              Apply Now
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow pt-24">
+      <!-- Hero Section -->
+      <section class="bg-tribal-50/50 py-16 md:py-24">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-tribal-900 animate-fade-up">
+              Tribal Installment Loans in {stateInfo.name}
+            </h1>
+            <p class="text-xl text-tribal-600 mb-8 animate-fade-up" style="animation-delay: 100ms;">
+              Connect with tribal lenders offering flexible installment loans for {stateInfo.name} residents.
+            </p>
+            <div class="animate-fade-up" style="animation-delay: 200ms;">
+              <a 
+                href="/apply" 
+                class="button-hover-effect bg-tribal-500 hover:bg-tribal-600 text-white px-8 py-4 rounded-full font-medium inline-flex items-center"
+              >
+                Apply Now
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- State-specific content -->
+      <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12 fade-in-when-visible">
+              <h2 class="text-3xl md:text-4xl font-bold mb-6 text-tribal-900">Tribal Loans for {stateInfo.name} Residents</h2>
+              <p class="text-lg text-tribal-600">
+                Learn about tribal installment loan options available to residents of {stateInfo.name}.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div class="bg-tribal-50 rounded-lg p-6 border border-tribal-100 shadow-soft fade-in-when-visible">
+                <h3 class="text-xl font-bold mb-4 text-tribal-900">About {stateInfo.name} Tribal Loans</h3>
+                <p class="text-tribal-700 mb-4">
+                  {stateInfo.name} residents can access tribal installment loans as an alternative to traditional bank loans or payday loans. These loans are offered by lenders associated with Native American tribes, operating under tribal sovereignty.
+                </p>
+                <p class="text-tribal-700">
+                  For {stateInfo.name} residents facing unexpected expenses, tribal loans offer a convenient online application process and potential approval regardless of credit history. These installment loans typically provide higher loan amounts and longer repayment periods than payday loans.
+                </p>
+              </div>
+              
+              <div class="bg-tribal-50 rounded-lg p-6 border border-tribal-100 shadow-soft fade-in-when-visible">
+                <h3 class="text-xl font-bold mb-4 text-tribal-900">{stateInfo.name} Loan Information</h3>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-tribal-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="text-tribal-700">Available to {stateInfo.name} residents aged 18 and older</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-tribal-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="text-tribal-700">Loan amounts: $300 - $5,000 based on qualification</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-tribal-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="text-tribal-700">Flexible repayment terms: 3-36 months</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-tribal-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="text-tribal-700">Fast online application process</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-tribal-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="text-tribal-700">Funds deposited as soon as next business day</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-tribal-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="text-tribal-700">Alternative to traditional bank loans in {stateInfo.name}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-tribal-50 rounded-lg p-6 border border-tribal-100 shadow-soft mb-12 fade-in-when-visible">
+              <h3 class="text-xl font-bold mb-4 text-tribal-900">Why {stateInfo.name} Residents Choose Tribal Loans</h3>
+              <p class="text-tribal-700 mb-4">
+                {stateInfo.description}
+              </p>
+              <p class="text-tribal-700">
+                If you're a {stateInfo.name} resident facing unexpected expenses or looking for financial assistance between paychecks, tribal installment loans offer a convenient solution with easy online applications, quick approvals, and flexible repayment terms.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Testimonials Section -->
+      <section class="py-16 bg-tribal-50/50">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12 fade-in-when-visible">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-tribal-900">{stateInfo.name} Customer Experiences</h2>
+            <p class="text-tribal-600 max-w-2xl mx-auto">
+              Read what {stateInfo.name} residents are saying about their tribal loan experiences.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {randomTestimonials.map((testimonial, index) => (
+              <div class="bg-white rounded-lg shadow-soft p-6 border border-tribal-100/50 fade-in-when-visible" data-delay={index * 100}>
+                <div class="flex items-center mb-4">
+                  <div class="bg-tribal-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                    <span class="text-tribal-500 font-bold text-xl">{testimonial.name.charAt(0)}</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-tribal-900">{testimonial.name}</h4>
+                    <p class="text-sm text-tribal-600">{testimonial.location}</p>
+                  </div>
+                </div>
+                
+                <div class="flex mb-3">
+                  {Array.from({ length: 5 }, (_, i) => (
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      viewBox="0 0 24 24" 
+                      fill={i < testimonial.rating ? "currentColor" : "none"} 
+                      stroke="currentColor" 
+                      class={`w-5 h-5 ${i < testimonial.rating ? "text-yellow-400" : "text-gray-300"}`}
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                    </svg>
+                  ))}
+                </div>
+                
+                <p class="text-tribal-700">{testimonial.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      <!-- FAQ Section -->
+      <FAQ 
+        items={faqItems}
+        title={`Frequently Asked Questions About Tribal Loans in ${stateInfo.name}`}
+        subtitle={`Common questions from ${stateInfo.name} residents about tribal installment loans.`}
+      />
+      
+      <!-- CTA Section -->
+      <CTASection />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-tribal-900 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- Company Info -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">Tribal<span class="text-tribal-500">Loans</span></h3>
+            <p class="text-tribal-300 mb-4">
+              Connecting borrowers with tribal lenders for flexible installment loans across the United States.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" aria-label="Facebook" class="text-white hover:text-tribal-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </a>
+              <a href="#" aria-label="Twitter" class="text-white hover:text-tribal-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+              </a>
+              <a href="#" aria-label="Instagram" class="text-white hover:text-tribal-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+              </a>
+              <a href="#" aria-label="LinkedIn" class="text-white hover:text-tribal-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li><a href="/" class="text-tribal-300 hover:text-white">Home</a></li>
+              <li><a href="/how-it-works" class="text-tribal-300 hover:text-white">How It Works</a></li>
+              <li><a href="/about-us" class="text-tribal-300 hover:text-white">About Us</a></li>
+              <li><a href="/contact" class="text-tribal-300 hover:text-white">Contact</a></li>
+            </ul>
+          </div>
+          
+          <!-- Legal -->
+          <div>
+            <h3 class="text-lg font-bold mb-4">Legal</h3>
+            <ul class="space-y-2">
+              <li><a href="/privacy-policy" class="text-tribal-300 hover:text-white">Privacy Policy</a></li>
+              <li><a href="/terms-conditions" class="text-tribal-300 hover:text-white">Terms & Conditions</a></li>
+              <li><a href="#" class="text-tribal-300 hover:text-white">Responsible Lending</a></li>
+              <li><a href="#" class="text-tribal-300 hover:text-white">Licenses</a></li>
+            </ul>
+          </div>
+          
+          <!-- States -->
+          <div>
+            <h3 class="text-lg font-bold mb-4">States</h3>
+            <div class="grid grid-cols-2 gap-1">
+              <a href="/california" class="text-tribal-300 hover:text-white">California</a>
+              <a href="/texas" class="text-tribal-300 hover:text-white">Texas</a>
+              <a href="/florida" class="text-tribal-300 hover:text-white">Florida</a>
+              <a href="/new-york" class="text-tribal-300 hover:text-white">New York</a>
+              <a href="/ohio" class="text-tribal-300 hover:text-white">Ohio</a>
+              <a href="/illinois" class="text-tribal-300 hover:text-white">Illinois</a>
+              <a href="#" class="text-tribal-500 hover:text-white font-medium">View All States</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="border-t border-tribal-800 pt-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+            <p class="text-tribal-400 text-sm">
+              &copy; {new Date().getFullYear()} Tribal Installment Loans. All rights reserved.
+            </p>
+            <p class="text-tribal-400 text-sm md:text-right">
+              <span class="block md:inline">Tribal Installment Loans is not a lender</span>
+              <span class="hidden md:inline mx-1">|</span>
+              <span class="block md:inline">This website does not constitute an offer to lend</span>
+            </p>
+          </div>
+          
+          <div class="mt-4">
+            <p class="text-tribal-400 text-xs">
+              Disclaimer: This website does not constitute an offer or solicitation to lend. The operator of this website is not a lender and does not make credit decisions. This website only provides a service and is not an agent, representative, or broker of any lender. This service is not available in all states. The residents of AR, NY, VT, WV, GA, MA, PA, CT, NC are not eligible to use this website's service to request a loan. This website's service is not an offer or solicitation for loan products which are prohibited by any state law. This is not a solicitation for a particular loan and is not an offer to lend.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+  <script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      // Intersection Observer for fade-in animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            
+            // Handle delay if specified
+            const delay = entry.target.dataset.delay;
+            if (delay) {
+              entry.target.style.transitionDelay = `${delay}ms`;
+            }
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      const elements = document.querySelectorAll('.fade-in-when-visible');
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
+</Layout>
