@@ -1,69 +1,50 @@
-# Welcome to your Lovable project
 
-## Project info
+# Tribal Installment Loans Static Website
 
-**URL**: https://lovable.dev/projects/64abdab0-8c73-4094-9657-e58b4526623b
+This is a static HTML website for Tribal Installment Loans, built with Astro.
 
-## How can I edit this code?
+## Building for Deployment
 
-There are several ways of editing your application.
+To build the static site:
 
-**Use Lovable**
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/64abdab0-8c73-4094-9657-e58b4526623b) and start prompting.
+2. Build the site:
+   ```bash
+   node build.js
+   ```
+   or
+   ```bash
+   npx astro build
+   ```
 
-Changes made via Lovable will be committed automatically to this repo.
+3. The built files will be in the `dist` directory, ready for deployment to any static hosting service.
 
-**Use your preferred IDE**
+## Deployment
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+The contents of the `dist` directory can be deployed to any static web hosting service like:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Netlify
+- Vercel
+- GitHub Pages
+- Amazon S3
+- Any traditional web hosting service
 
-Follow these steps:
+Simply upload all the files in the `dist` directory to your hosting provider's web root.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Structure
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- `dist/` - The built static files (HTML, CSS, JavaScript, images)
+- `src/` - Source files
+  - `components/` - Reusable components
+  - `layouts/` - Page layouts
+  - `pages/` - Individual pages
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Notes
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/64abdab0-8c73-4094-9657-e58b4526623b) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+- This site is completely static and doesn't require any server-side processing.
+- All forms and interactive elements rely on client-side JavaScript.
+- The form on the Apply page uses an external form provider (RNDFrame).

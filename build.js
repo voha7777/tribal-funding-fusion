@@ -1,5 +1,5 @@
 
-// This file contains a simple script to build the Astro static site
+// This file contains a script to build the Astro static site
 
 const { exec } = require('child_process');
 
