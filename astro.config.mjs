@@ -8,4 +8,7 @@ export default defineConfig({
   integrations: [react(), tailwind()],
   site: 'https://tribal-installment-loans.com',
   outDir: './dist',
+  build: {
+    format: 'file'
+  }
 });

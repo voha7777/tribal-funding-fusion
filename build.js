@@ -1,6 +1,4 @@
 
-// This file contains a script to build the Astro static site
-
 const { exec } = require('child_process');
 
 console.log('Building Astro static site...');
