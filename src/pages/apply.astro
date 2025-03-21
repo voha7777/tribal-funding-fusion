@@ -1,0 +1,149 @@
+
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/astro/Header.astro';
+import Footer from '../components/astro/Footer.astro';
+import CTASection from '../components/astro/CTASection.astro';
+---
+
+<Layout 
+  title="Apply for Tribal Installment Loans | Quick Online Application"
+  description="Apply now for tribal installment loans with our simple online application. Get quick decisions and funds as soon as the next business day."
+  canonicalUrl="https://tribal-installment-loans.com/apply"
+  keywords="apply tribal loans, tribal loan application, apply for installment loans, tribal loan online form"
+>
+  <div class="flex flex-col min-h-screen">
+    <Header />
+    
+    <main class="flex-grow">
+      <!-- Hero Section -->
+      <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-tribal-900 to-tribal-800 text-white overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+          <div class="absolute top-0 left-0 w-96 h-96 bg-tribal-500 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+          <div class="absolute bottom-0 right-0 w-96 h-96 bg-tribal-400 rounded-full filter blur-3xl transform translate-x-1/3 translate-y-1/3"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+          <div class="max-w-3xl mx-auto text-center fade-in-when-visible">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">Apply for a Tribal Installment Loan</h1>
+            <p class="text-xl text-white/90 mb-8">
+              Complete our simple application to get the funds you need quickly and securely.
+            </p>
+          </div>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 right-0">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full h-auto">
+            <path fill="#ffffff" fill-opacity="1" d="M0,96L80,112C160,128,320,160,480,154.7C640,149,800,107,960,90.7C1120,75,1280,85,1360,90.7L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+          </svg>
+        </div>
+      </section>
+      
+      <!-- Application Form Section -->
+      <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="max-w-5xl mx-auto">
+            <div class="prose prose-lg max-w-none text-tribal-700 mb-8">
+              <h2 class="text-2xl font-bold text-tribal-900 mb-4">Apply Online in Minutes</h2>
+              <p>
+                Our straightforward application process makes it easy to apply for the funds you need. 
+                Fill out the form below with your information, and you could receive a decision quickly.
+              </p>
+              <p>
+                Before you apply, please ensure you have:
+              </p>
+              <ul class="list-disc pl-5">
+                <li>A valid government-issued ID</li>
+                <li>Proof of regular income</li>
+                <li>An active checking account</li>
+                <li>A valid email address and phone number</li>
+              </ul>
+              <p>
+                Once approved, funds could be deposited directly to your bank account as soon as the next business day.
+              </p>
+            </div>
+            
+            <div class="bg-tribal-50 rounded-xl p-8 shadow-sm mb-8">
+              <div id="formContainer" class="w-full">
+                <div id="rsForm"></div>
+              </div>
+            </div>
+            
+            <div class="prose prose-lg max-w-none text-tribal-700 mt-12">
+              <h2 class="text-2xl font-bold text-tribal-900 mb-4">What Happens After You Apply</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div class="glass-card rounded-lg p-6">
+                  <div class="bg-tribal-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <span class="text-tribal-500 font-bold text-xl">1</span>
+                  </div>
+                  <h3 class="text-xl font-bold mb-2 text-tribal-900">Application Review</h3>
+                  <p class="text-tribal-600">Your application will be reviewed promptly, often within minutes of submission.</p>
+                </div>
+                
+                <div class="glass-card rounded-lg p-6">
+                  <div class="bg-tribal-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <span class="text-tribal-500 font-bold text-xl">2</span>
+                  </div>
+                  <h3 class="text-xl font-bold mb-2 text-tribal-900">Loan Approval</h3>
+                  <p class="text-tribal-600">If approved, you'll receive your personalized loan terms to review and accept.</p>
+                </div>
+                
+                <div class="glass-card rounded-lg p-6">
+                  <div class="bg-tribal-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <span class="text-tribal-500 font-bold text-xl">3</span>
+                  </div>
+                  <h3 class="text-xl font-bold mb-2 text-tribal-900">Fund Disbursement</h3>
+                  <p class="text-tribal-600">After acceptance, funds are typically deposited to your bank account by the next business day.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <CTASection />
+    </main>
+    
+    <Footer />
+  </div>
+</Layout>
+
+<script>
+  // Load external scripts needed for the form
+  document.addEventListener('DOMContentLoaded', function() {
+    const jsonScript = document.createElement('script');
+    jsonScript.src = 'https://www.rndframe.com/server/web/js/json.min.js';
+    jsonScript.type = 'text/javascript';
+    document.body.appendChild(jsonScript);
+
+    jsonScript.onload = () => {
+      const formScript = document.createElement('script');
+      formScript.type = 'text/javascript';
+      formScript.innerHTML = `
+        var srcURL= 'https://www.rndframe.com/server'; 
+        var inputOptions = { 
+          UserID: 'ZT4LlEwwo9MoHR4Sd6sYVDeevacfDDdSagmRZFWx_98.', 
+          Style: 'STYLE1', 
+          FormID: 'INSTALLMENT_STEP', 
+          SubID: '', 
+          SubID2: '', 
+          SubID3: '', 
+          Domain: '', 
+          Height: 'AUTO', 
+          StepAmountSelect: 'buttons'
+        }; 
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = srcURL + '/init.php?vn=' + encodeURIComponent(JSON.stringify(inputOptions));
+        document.getElementById('formContainer').appendChild(script);
+        
+        if(!inputOptions.TargetDivID) {
+          const rsFormDiv = document.createElement('div');
+          rsFormDiv.id = 'rsForm';
+          document.getElementById('formContainer').appendChild(rsFormDiv);
+        }
+      `;
+      document.body.appendChild(formScript);
+    };
+  });
+</script>
